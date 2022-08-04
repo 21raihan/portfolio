@@ -1,0 +1,120 @@
+. {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+.Bubble{
+    position: absolute;
+    width: 220px ;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: inset 00 25px rgba(255, 255, 255, 0.25 );
+    animation: animate 10s ease-in-out infinite;
+}
+.Bubble:nth-child(2){
+    position: relative;
+    zoom: 0.50;
+    top: -100px;
+    left: -10px;
+    animation-delay: -4s;
+
+
+}
+.Bubble:nth-child(3){
+    position: relative;
+    zoom: 0.25;
+    right: -80px;
+    top: -300px;
+    animation-delay: -6s;
+}
+.Bubble:nth-child(4){
+    position: relative;
+    zoom: 0.350;
+    right:-130px;
+    bottom:-210px;
+    animation-delay: -4s;
+}
+.Bubble:nth-child(5){
+    position: relative;
+    zoom: 0.50;
+    left: 0px;
+    top:210px;
+    animation-delay: -4s;
+}
+
+
+@keyframes animate{
+    0%,100%
+    {
+        transform: translateY(-25px);
+    }
+    50%
+    {
+        transform: translateX(-25px);
+    }
+    
+}
+.Bubble::before{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 45px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 10;
+    filter: blur(2px);
+}
+.Bubble::after{
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 10;
+    filter: blur(2px);
+
+}
+
+.Bubble span {
+    position: absolute;
+    border-radius: 50%;
+}
+.Bubble span:nth-child(1){
+    inset: 10px;
+    border-left: 15px solid #0fb4ff;
+    filter: blur(8px);
+}
+.Bubble span:nth-child(2){
+    inset: 10px;
+    border-right: 15px solid #8f0c29;
+    filter: blur(8px);
+}
+.Bubble span:nth-child(3){
+    inset: 10px;
+    border-top: 15px solid #17ac50;
+    filter: blur(8px);
+    
+}
+.Bubble span:nth-child(4){
+    inset: 25px;
+    border-left: 15px solid #a2b91b;
+    filter: blur(8px);
+}
+.Bubble span:nth-child(1){
+    inset: 10px;
+    border-bottom: 15px solid #2b1363;
+    filter: blur(8px);
+    transform: rotate(300deg);
+}
