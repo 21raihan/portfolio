@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vh;
+    background: linear-gradient(#cf1165,#066d9b);
+}
+.clock{
+    height: 90vmin;
+    width: 90vmin;
+    background: rgb(12 35 55);
+    border-radius: 50%;
+    border: 15px solid #07229787;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow:0 0 30px 5px
+    rgb(252, 246, 246),
+    inset 0 0 10px 1px black;
+}
+svg{
+    height: 100%;
+    width: 100%;
+}
+#hourhand{
+    height: 20%;
+    width: 3%;
+    background:#fff;
+}
+#minhand{
+    height: 25%;
+    width: 2%;
+    background: #777;
+}
+#sechand{
+    height: 30%;
+    width: 1%;
+    background: #a12110;
+}
+#hourhand , #minhand , #sechand{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 50%;
+    z-index: -1;
+    border-radius: 1vmin;
+    transform-origin: bottom;  
+}
